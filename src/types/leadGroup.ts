@@ -16,9 +16,9 @@ export interface LeadGroup extends BaseEntity {
   leadFiltersSourceMetadataRequirements?: any;
   leadFiltersPropertyPrefsPriceRangeMin?: number;
   leadFiltersPropertyPrefsPriceRangeMax?: number;
-  metaAdSetId?: string;
-  metaFormId?: string;
-  metaCampaignId?: string;
+  metaAdSetId?: string[];
+  metaFormId?: string[];
+  metaCampaignId?: string[];
   imageUrl?: string;
   isActive?: boolean;
 } 
