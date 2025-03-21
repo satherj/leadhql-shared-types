@@ -1,4 +1,5 @@
 import { BaseEntity } from './common';
+import { BrandingSettings } from './organization';
 
 export interface LeadGroup extends BaseEntity {
   name: string;
@@ -21,4 +22,6 @@ export interface LeadGroup extends BaseEntity {
   metaCampaignId?: string[];
   imageUrl?: string;
   isActive?: boolean;
+  brandingSettings?: BrandingSettings;
+  brandingOrganizationId?: string;
 } 

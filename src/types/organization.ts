@@ -28,10 +28,21 @@ export interface BillingSettings {
   paymentMethodId?: string;
 }
 
+export interface BrandingSettings {
+  brandingName?: string;
+  brandingDescription?: string;
+  brandingLogoLightUrl?: string;
+  brandingLogoDarkUrl?: string;
+  brandingWebsite?: string;
+  brandingEmail?: string;
+  brandingPhone?: string;
+}
+
 export interface Organization extends BaseEntity {
   name: string;
   clerkOrgId: string;
   currentBalance: number;
   subscription: Subscription;
   billingSettings: BillingSettings;
+  brandingSettings: BrandingSettings;
 } 
