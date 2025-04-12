@@ -4,9 +4,9 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'leadhql-shared-types/src/**'
-      - 'leadhql-shared-types/package.json'
-      - 'leadhql-shared-types/tsconfig.json'
+      - 'src/**'
+      - 'package.json'
+      - 'tsconfig.json'
 
 jobs:
   build:
