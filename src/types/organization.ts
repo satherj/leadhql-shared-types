@@ -42,6 +42,7 @@ export interface Organization extends BaseEntity {
   name: string;
   clerkOrgId: string;
   currentBalance: number;
+  hqlSyncEnabled: boolean;
   subscription: Subscription;
   billingSettings: BillingSettings;
   brandingSettings: BrandingSettings;

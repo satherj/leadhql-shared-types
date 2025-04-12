@@ -1,0 +1,36 @@
+name: Build package
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'leadhql-shared-types/src/**'
+      - 'leadhql-shared-types/package.json'
+      - 'leadhql-shared-types/tsconfig.json'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'npm'
+          cache-dependency-path: leadhql-shared-types/package-lock.json
+          
+      - name: Install dependencies
+        working-directory: leadhql-shared-types
+        run: npm ci
+        
+      - name: Build package
+        working-directory: leadhql-shared-types
+        run: npm run build
+        
+      - name: List build output
+        working-directory: leadhql-shared-types
+        run: ls -la dist/ 
