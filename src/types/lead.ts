@@ -25,4 +25,5 @@ export interface Lead extends BaseEntity {
   enableAPIKey?: boolean;
   apiKey?: string;
   apiKeyIndex?: string;
+  closeLeadId?: string;
 } 
