@@ -89,6 +89,18 @@ export interface PropertyListing {
   isFurnished: boolean;
   hasAirConditioning: boolean;
   hasLift: boolean;
+  images?: Array<{
+    url: string;
+    alt?: string;
+    order: number;
+    isFeatured?: boolean;
+  }>;
+  thumbnails?: Array<{
+    url: string;
+    alt?: string;
+    order: number;
+    originalImageIndex: number;
+  }>;
   additionalFeatures?: Record<string, any>;
   createdAt: Date;
   updatedAt: Date;
