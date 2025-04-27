@@ -11,4 +11,5 @@ export * from './types/fxRate';
 export * from './types/pollTimestamp';
 export * from './types/subscriptionLanguagePreference';
 export * from './types/zapierApiKey';
+export * from './types/propertyListing';
 export * from './types/common'; 
