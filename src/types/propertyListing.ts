@@ -105,4 +105,5 @@ export interface PropertyListing {
   createdAt: Date;
   updatedAt: Date;
   publishedAt?: Date;
+  commission?: number;
 }
