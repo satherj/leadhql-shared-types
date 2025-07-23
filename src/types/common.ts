@@ -35,7 +35,7 @@ export enum InterestLevel {
   NONE = 'none'
 }
 
-export enum PropertyType {
+export enum LeadPropertyType {
   APARTMENT = 'apartment',
   HOUSE = 'house',
   COMMERCIAL = 'commercial',

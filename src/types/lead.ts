@@ -6,7 +6,7 @@ import {
   Timestamp,
   CallStatus,
   InterestLevel,
-  PropertyType,
+  LeadPropertyType,
   AppointmentStatus
 } from './common';
 
@@ -19,7 +19,7 @@ export interface LeadCalling {
   callAttempts: number;
   scheduledCallTimestamp?: Timestamp;
   interestLevel?: InterestLevel;
-  propertyType?: PropertyType;
+  propertyType?: LeadPropertyType;
   budgetRange?: string;
   timeline?: string;
   locationPreference?: string;
