@@ -1,4 +1,33 @@
-import { BaseEntity, Currency, LeadSource, LeadStatus, Timestamp } from './common';
+import { 
+  BaseEntity, 
+  Currency, 
+  LeadSource, 
+  LeadStatus, 
+  Timestamp,
+  CallStatus,
+  InterestLevel,
+  PropertyType,
+  AppointmentStatus
+} from './common';
+
+export interface LeadCalling {
+  callStatus: CallStatus;
+  lastCallDate?: Timestamp;
+  totalCallDuration: number;
+  callCost: number;
+  recordingUrl?: string;
+  callAttempts: number;
+  scheduledCallTimestamp?: Timestamp;
+  interestLevel?: InterestLevel;
+  propertyType?: PropertyType;
+  budgetRange?: string;
+  timeline?: string;
+  locationPreference?: string;
+  callSummary?: Record<string, any>;
+  appointmentStatus?: AppointmentStatus;
+  appointmentScheduledDate?: Timestamp;
+  agentNotified?: Record<string, any>;
+}
 
 export interface Lead extends BaseEntity {
   externalId?: string;
@@ -26,4 +55,5 @@ export interface Lead extends BaseEntity {
   apiKey?: string;
   apiKeyIndex?: string;
   closeLeadId?: string;
+  leadCalling: LeadCalling;
 } 
