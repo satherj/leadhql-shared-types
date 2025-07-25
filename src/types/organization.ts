@@ -28,6 +28,14 @@ export interface BillingSettings {
   paymentMethodId?: string;
 }
 
+export interface NotificationSetting {
+  type: 'email' | 'whatsapp' | 'phone';
+  value: string; // email address, phone number, or WhatsApp number
+  enabled: boolean;
+  isPrimary?: boolean; // optional flag to indicate primary notification method
+  label?: string; // optional friendly name like "Main Office", "Support Team"
+}
+
 export interface BrandingSettings {
   brandingName?: string;
   brandingDescription?: string;
@@ -61,6 +69,9 @@ export interface BrandingSettings {
 
   // Overall score (0-100, calculated from booleans, experience, and ratings)
   overallScore: number;
+
+  // Notification settings for call scheduling and other events
+  notificationSettings?: NotificationSetting[];
 }
 
 export interface Organization extends BaseEntity {
