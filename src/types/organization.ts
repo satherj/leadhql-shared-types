@@ -13,6 +13,12 @@ export enum BudgetType {
   MONTHLY = 'monthly'
 }
 
+export enum BrandingApprovalStatus {
+  PENDING = 'pending',
+  APPROVED = 'approved',
+  REJECTED = 'rejected'
+}
+
 export interface Subscription {
   planId: number;
   status: SubscriptionStatus;
@@ -72,6 +78,12 @@ export interface BrandingSettings {
 
   // Notification settings for call scheduling and other events
   notificationSettings?: NotificationSetting[];
+
+  // Approval workflow fields
+  approvalStatus?: BrandingApprovalStatus;
+  rejectionReason?: string;
+  approvedAt?: Timestamp;
+  approvedByUserId?: string;
 }
 
 export interface Organization extends BaseEntity {
