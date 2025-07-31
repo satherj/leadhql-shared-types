@@ -1,6 +1,11 @@
 import { BaseEntity } from './common';
 import { BrandingSettings } from './organization';
 
+export interface CoverageArea {
+  type: 'Polygon' | 'MultiPolygon';
+  coordinates: number[][][];
+}
+
 export interface LeadGroup extends BaseEntity {
   name: string;
   description?: string;
@@ -22,6 +27,7 @@ export interface LeadGroup extends BaseEntity {
   metaCampaignId?: string[];
   imageUrl?: string;
   isActive?: boolean;
+  coverageArea?: CoverageArea;
   brandingSettings?: BrandingSettings;
   brandingOrganizationId?: string;
 } 
