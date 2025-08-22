@@ -79,6 +79,9 @@ export interface BrandingSettings {
   // Notification settings for call scheduling and other events
   notificationSettings?: NotificationSetting[];
 
+  // Lead calling settings
+  leadCallingEnabled: boolean;
+
   // Approval workflow fields
   approvalStatus?: BrandingApprovalStatus;
   rejectionReason?: string;
