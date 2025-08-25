@@ -35,8 +35,8 @@ export interface BillingSettings {
 }
 
 export interface NotificationSetting {
-  type: 'email' | 'whatsapp' | 'phone';
-  value: string; // email address, phone number, or WhatsApp number
+  type: 'email' | 'whatsapp';
+  value: string; // email address or WhatsApp number
   enabled: boolean;
   isPrimary?: boolean; // optional flag to indicate primary notification method
   label?: string; // optional friendly name like "Main Office", "Support Team"
