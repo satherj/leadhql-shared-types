@@ -3,31 +3,10 @@ import {
   Currency, 
   LeadSource, 
   LeadStatus, 
-  Timestamp,
-  CallStatus,
-  InterestLevel,
-  LeadPropertyType,
-  AppointmentStatus
+  Timestamp
 } from './common';
 
-export interface LeadCalling {
-  callStatus: CallStatus;
-  lastCallDate?: Timestamp;
-  totalCallDuration: number;
-  callCost: number;
-  recordingUrl?: string;
-  callAttempts: number;
-  scheduledCallTimestamp?: Timestamp;
-  interestLevel?: InterestLevel;
-  propertyType?: LeadPropertyType;
-  budgetRange?: string;
-  timeline?: string;
-  locationPreference?: string;
-  callSummary?: Record<string, any>;
-  appointmentStatus?: AppointmentStatus;
-  appointmentScheduledDate?: Timestamp;
-  agentNotified?: Record<string, any>;
-}
+// LeadCalling interface removed - all call data moved to Call entity
 
 export interface Lead extends BaseEntity {
   externalId?: string;
@@ -55,5 +34,5 @@ export interface Lead extends BaseEntity {
   apiKey?: string;
   apiKeyIndex?: string;
   closeLeadId?: string;
-  leadCalling: LeadCalling;
+  // leadCalling removed - all call data moved to Call entity
 } 
