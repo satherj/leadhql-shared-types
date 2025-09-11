@@ -20,14 +20,6 @@ export enum Currency {
   GBP = 'GBP'
 }
 
-export enum CallStatus {
-  NOT_CALLED = 'not_called',
-  SCHEDULED_TIME = 'scheduled_time',
-  NOT_INTERESTED = 'not_interested',
-  NO_ANSWER = 'no_answer',
-  INVALID_NUMBER = 'invalid_number'
-}
-
 export enum InterestLevel {
   HIGH = 'high',
   MEDIUM = 'medium',
