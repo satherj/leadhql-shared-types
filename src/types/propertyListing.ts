@@ -106,4 +106,7 @@ export interface PropertyListing {
   updatedAt: Date;
   publishedAt?: Date;
   commission?: number;
+  expiresAt?: Date;
+  lastRenewedAt?: Date;
+  autoRenewEnabled: boolean;
 }
