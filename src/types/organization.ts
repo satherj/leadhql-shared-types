@@ -82,6 +82,9 @@ export interface BrandingSettings {
   // Lead calling settings
   leadCallingEnabled: boolean;
 
+  // Automatic sales emails settings
+  automaticSalesEmailsEnabled: boolean;
+
   // Approval workflow fields
   approvalStatus?: BrandingApprovalStatus;
   rejectionReason?: string;
