@@ -11,7 +11,8 @@ export enum ListingStatus {
 export enum ListingType {
   SALE = 'sale',
   RENT = 'rent',
-  SALE_OR_RENT = 'sale_or_rent'
+  SALE_OR_RENT = 'sale_or_rent',
+  FRACTION = 'fraction'
 }
 
 export enum PropertyCategory {
