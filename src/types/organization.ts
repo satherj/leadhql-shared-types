@@ -54,6 +54,7 @@ export interface BrandingSettings {
   // Location information
   countryCode?: string; // BCP 47 country code (e.g., 'US', 'CA', 'GB')
   city?: string;
+  brandingAddress?: string; // Full street address (e.g., "123 Ocean Drive, Miami Beach, FL 33139, USA")
 
   // Languages spoken (BCP 47 language codes)
   languagesSpoken?: string[]; // e.g., ['en-US', 'es-ES', 'fr-FR']
