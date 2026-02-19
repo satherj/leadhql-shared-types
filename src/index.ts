@@ -14,4 +14,6 @@ export * from './types/zapierApiKey';
 export * from './types/propertyListing';
 export * from './types/common';
 export * from './types/agent';
-export * from './types/call'; 
+export * from './types/call';
+export * from './types/task';
+export * from './types/note';

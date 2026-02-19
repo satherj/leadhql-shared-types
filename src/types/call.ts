@@ -42,7 +42,9 @@ export interface WebhookEvent {
 }
 
 export interface Call extends BaseEntity {
-  vapiCallId: string;
+  externalCallId: string;
+  provider?: string;
+  ownerId?: string;
   leadId?: number;
   organizationId: string;
   type?: string;

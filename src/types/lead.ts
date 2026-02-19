@@ -34,5 +34,14 @@ export interface Lead extends BaseEntity {
   apiKey?: string;
   apiKeyIndex?: string;
   closeLeadId?: string;
-  // leadCalling removed - all call data moved to Call entity
+  crmStatus?: CrmLeadStatus;
+  ownerId?: string | null;
+}
+
+export enum CrmLeadStatus {
+  LEAD = 'lead',
+  POTENTIAL = 'potential',
+  BAD_TIMING = 'bad_timing',
+  CLIENT = 'client',
+  UNQUALIFIED = 'unqualified',
 } 
